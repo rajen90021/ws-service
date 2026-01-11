@@ -10,5 +10,7 @@ export const createMessageBroker = (): MessageBroker => {
   if (!broker) {
     broker = new KafkaBroker("ws-service", [config.get("kafka.broker")]);
   }
+
+  
   return broker;
 };
